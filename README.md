@@ -9,16 +9,21 @@ To run the app, please see the [README.md](app/README.md).
 ## Build Dependencies
 
 ```
+cd modules/limit-order-sdk
+npm install --force
+npm run build
+npm test
 cd modules/fusion-sdk
 npm install --force
 npm run build
-npm pack
 npm test
 cd modules/cross-chain-sdk
 npm install --force
 npm run build
-npm pack
 npm test
+cd modules/cross-chain-resolver-example
+npm install --force
+pnpm test
 ```
 
 ## Useful Links
