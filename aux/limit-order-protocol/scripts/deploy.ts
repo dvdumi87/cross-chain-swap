@@ -4,8 +4,9 @@ const wethByNetwork: Record<string, string> = {
     'hardhat': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     'mainnet': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     'etherlinktest': '0x86932ff467A7e055d679F7578A0A4F96Be287861',
-    'sepolia': '0x67019c0e595f4adba583FB760D6168d9a44982ea',
-    'xlayertest': '0x7B05b8cb6B56dd2614f7F7457046561B1851FAc4'
+    'sepolia': '0xc4C937B059311BFbbb9EbF763D3Ac1F7127e9AD1',
+    'xlayertestnet': '0x7B05b8cb6B56dd2614f7F7457046561B1851FAc4',
+    'xlayerdevnet': '0x38bA08583449266CA01d4CF38c21E1ADe3c8F645'
 };
 
 export const DeployContracts = async (): Promise<Boolean> => {

@@ -30,10 +30,15 @@ const config: HardhatUserConfig = {
       url: "https://node.ghostnet.etherlink.com",
       accounts: [process.env.PRIVATE_KEY || ""],
     },
-    xlayertest: {
+    xlayertestnet: {
       url: "https://testrpc.xlayer.tech",
       accounts: [process.env.PRIVATE_KEY || ""],
       gasPrice: 10000000000,
+    },
+    xlayerdevnet: {
+      url: "http://localhost:8123",
+      accounts: [process.env.PRIVATE_KEY || ""],
+      gasPrice: 1
     },
     sepolia: {
       url: "https://eth-sepolia.g.alchemy.com/public",
