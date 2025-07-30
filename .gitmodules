@@ -1,0 +1,9 @@
+[submodule "modules/fusion-sdk"]
+	path = modules/fusion-sdk
+	url = git@github.com:dvdumi87/fusion-sdk.git
+[submodule "modules/cross-chain-sdk"]
+	path = modules/cross-chain-sdk
+	url = git@github.com:dvdumi87/cross-chain-sdk.git
+[submodule "modules/cross-chain-resolver-example"]
+	path = modules/cross-chain-resolver-example
+	url = git@github.com:dvdumi87/cross-chain-resolver-example.git
