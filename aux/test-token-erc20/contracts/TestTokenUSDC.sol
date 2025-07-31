@@ -5,6 +5,11 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // ERC20 token used for unit testing
 contract TestTokenUSDC is ERC20 {
+
+    function decimals() public pure override returns (uint8) {
+        return 6;
+    }
+
     constructor(uint256 initialSupply) ERC20("TestTokenUSDC", "USDC") {
         _mint(msg.sender, initialSupply * 10 ** decimals());
     }

@@ -1,4 +1,8 @@
 import { ethers } from "hardhat";
+import { updateEnvFile } from "./utils";
+
+const USER_ADDRESS = process.env.USER_ADDRESS || ""
+const RESOLVER_ADDRESS = process.env.RESOLVER_ADDRESS || ""
 
 export const DeployContracts = async (): Promise<Boolean> => {
   const network = await ethers.provider.getNetwork();
@@ -12,6 +16,15 @@ export const DeployContracts = async (): Promise<Boolean> => {
 
   console.log("TestTokenWETH address: ", contract.target);
 
+  const keyName = network.name.toUpperCase() + "_WETH_ADDRESS";
+  const addrs = {
+    [keyName]: contract.target.toString(),
+  }
+  updateEnvFile(addrs);
+
+  const amount = 1000n * 10n ** (await contract.decimals());
+  await contract.transfer(USER_ADDRESS, amount);
+  await contract.transfer(RESOLVER_ADDRESS, amount);
 
   return true;
 }

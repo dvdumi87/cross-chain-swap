@@ -31,6 +31,11 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY || ""],
       gasPrice: 1
     },
+    xlayerdevnet2: {
+      url: "http://localhost:8124",
+      accounts: [process.env.PRIVATE_KEY || ""],
+      gasPrice: 1
+    },
     sepolia: {
       url: "https://eth-sepolia.g.alchemy.com/public",
       accounts: [process.env.PRIVATE_KEY || ""]
